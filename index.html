@@ -9,15 +9,20 @@
   <link rel="stylesheet" href="./css/common.css">
   <title>Home</title>
   <script type="text/javascript">
+  var wrong=true;
   function check()
-        {
+        { 
           var password = document.getElementById('user');
           if(user.value == "admin")
             window.location.href="./views/password.html"
           else if(user.value == "teacher")
             window.location.href="./views/password.html"
           else
-            document.getElementById('login-area').innerHTML= "<p style='color:red'>Invalid Username</p>"+document.getElementById('login-area').innerHTML;
+            if(wrong==true)
+            {
+              document.getElementById('login-area').innerHTML= "<p style='color:red'>Invalid Username</p>"+document.getElementById('login-area').innerHTML;
+              wrong=false;
+            }
         }
       </script>
 </head>
