@@ -14,8 +14,7 @@
 
 select
 {
-	border-radius:2px;
-  border:1px solid #000000;
+	border-radius:3px;
 }
 
 #radios
@@ -23,7 +22,7 @@ select
 	display: flex;
 	width: 100%;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
 input[type=text]:focus {
@@ -41,3 +40,10 @@ h2
 {
 	text-align: center;
 }
+
+select
+{
+	background-color: #FFF;
+	border: 1px solid black;
+}
+
