@@ -260,3 +260,9 @@ tr:nth-child(even) {background-color: #f2f2f2;}
     margin-left:20px;
   }
 }
+
+@media only screen and (max-width: 462px) {
+  .navitem{
+    padding: 10px;
+  }
+}

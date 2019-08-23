@@ -91,7 +91,7 @@ th, td {
   margin-top: 50px;
   height: 100px;
   position:relative; 
-  align-self: center;
+  left: 35%;
   top:15%;
 }
 .pieBackground {
@@ -150,10 +150,44 @@ th, td {
   transform:rotate(30deg);
 }
 
-#pieflex{
-  margin-left:10vw;
-}
-
 
 tr:nth-child(even) {background-color: #f2f2f2;}
 
+@media screen and (max-width: 480px) {
+  /* .teacherbtn{
+    flex: 1;
+  } */
+  .teacherbtncont{
+    flex-direction: column;
+  }
+  .teacherbtn:nth-child(2){
+    margin-top: 20px;
+  }
+  .tableData{
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 10px;
+    margin-top: 120px;
+  }
+  .pie{
+    width: 200px;
+    height: 200px;
+    clip:rect(0px,100px,200px,0px)
+  }
+  .hold{
+    width: 200px;
+    height: 200px;
+    clip:rect(0px,100px,200px,0px)    
+  }
+  .pieBackground{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+
+  }
+  .pieContainer{
+    position:relative; 
+    left: 25%;
+    top:15%;
+  }
+}
