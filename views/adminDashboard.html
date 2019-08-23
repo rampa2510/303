@@ -9,6 +9,11 @@
   <link rel="stylesheet" href="../css/common.css">
   <title>Admin Dashboard</title>
 </head>
+<script>
+  if(!window.localStorage.getItem('user1')){
+    window.location.href="../index.html"
+  }
+</script>
 <body>  
   <div id = "navbar">
     <a href="../index.html" class = "navitem">Home</a>

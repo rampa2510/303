@@ -9,7 +9,12 @@
   <link rel="stylesheet" href="../css/common.css">
   <title>Teachers Dashboard</title>
 </head>
-
+<script>
+  console.log(window.localStorage.getItem('user1'))
+  if(!window.localStorage.getItem('user1')){
+    window.location.href="../index.html"
+  }
+</script>
 <body>  
   <div id = "navbar">
     <a href="../index.html" class = "navitem">Home</a>
