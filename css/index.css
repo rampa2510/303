@@ -12,7 +12,6 @@ body,html
   height: 8vh;
   justify-content: left;
   align-items: center;
-  margin-bottom:8vh;
   position: fixed;
   top:0;
   background-color: black;
@@ -22,14 +21,27 @@ body,html
 .navitem
 {
   color:white;
-  padding:20px;
+  padding:2vw;
   text-decoration: none;
   font-family: Arial;
+}
+
+.navitem:hover
+{
+  transform: scale(1.1);
 }
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
+  border-radius: 5px; 
+  width: 90vw;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top:12vh;
+  justify-content: space-around;
 }
 
 .card:hover {
@@ -39,28 +51,21 @@ body,html
 .container {
   padding: 2px 16px;
 }
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  border-radius: 5px; 
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top:12vh;
-}
 
 img {
   
   border-radius: 5px 5px 0 0;
   width:50%;
+  height: 40%;
   margin-top:15px;
 }
 .loginCon{
   display: flex;
-  width: 100%;
-  align-items:space-around;
+  width: 100vw;
+  align-items:space-between;
   justify-content: center;
+  height: 80vh;
+  
 }
 
 #login-area
@@ -68,16 +73,31 @@ img {
   display:flex;
   flex-direction: row;
   width:100%;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 input[type=text]
 {
   padding: 12px 20px;
-  margin: 8px;
+  margin: 12px;
   box-sizing: border-box;
+  width:70%;
 }
 input[type=text]:focus {
+  border: 3px solid #555;
+
+}
+
+input[type=password]
+{
+  padding: 12px 20px;
+  margin: 12px;
+  box-sizing: border-box;
+  width:60%;
+}
+input[type=password]:focus {
   border: 3px solid #555;
 
 }
@@ -118,3 +138,17 @@ input[type=text]:focus {
   position:relative;
   top:1px;
 }
+
+@media only screen and (min-width: 900px) {
+  .card 
+  {
+    width: 35vw;
+  }
+  .navitem
+  {
+  	padding:20px;
+  }
+}
+
+
+
