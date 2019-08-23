@@ -16,7 +16,6 @@ body,html
   position: fixed;
   top:0;
   background-color: black;
-
 }
 .autocomplete {
   display: flex;
@@ -113,23 +112,115 @@ input[type=submit] {
   top:1px;
 }
 
+.pieContainer {
+  margin-top: 50px;
+  height: 100px;
+  position:relative; 
+  left: 35%;
+  top:15%;
+}
+.pieBackground {
+  background-color: yellowgreen;
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  -moz-border-radius: 300px;
+  -webkit-border-radius: 300px;
+  -o-border-radius: 300px;
+  border-radius: 300px;
+  -moz-box-shadow: -1px 1px 3px #000;
+  -webkit-box-shadow: -1px 1px 3px #000;
+  -o-box-shadow: -1px 1px 3px #000;
+  box-shadow: -1px 1px 3px #000;
+}
+.pie {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  -moz-border-radius: 300px;
+  -webkit-border-radius: 300px;
+  -o-border-radius: 300px;
+  border-radius: 300px;
+  clip: rect(0px, 300px, 600px, 0px);
+}
+.hold {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  -moz-border-radius: 300px;
+  -webkit-border-radius: 300px;
+  -o-border-radius: 300px;
+  border-radius: 300px;
+  clip: rect(0px, 600px, 600px, 300px);
+}
 
-.pie{
-  width:80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 100px;
-  margin-left: 10%;
+#pieSlice1 .pie {
+  background-color: grey;
+  -webkit-transform:rotate(108deg);
+  -moz-transform:rotate(108deg);
+  -o-transform:rotate(108deg);
+  transform:rotate(108deg);
 }
-.graph{
-  width: 60%;
-  height: 40%;
+#pieSlice2 {
+  -webkit-transform:rotate(108deg);
+  -moz-transform:rotate(108deg);
+  -o-transform:rotate(108deg);
+  transform:rotate(108deg);
 }
+#pieSlice2 .pie {
+  background-color: orange;
+  -webkit-transform:rotate(30deg);
+  -moz-transform:rotate(30deg);
+  -o-transform:rotate(30deg);
+  transform:rotate(30deg);
+}
+
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+@media screen and (max-width: 480px) {
+  /* .teacherbtn{
+    flex: 1;
+  } */
+  .teacherbtncont{
+    flex-direction: column;
+  }
+  .teacherbtn:nth-child(2){
+    margin-top: 20px;
+  }
+  .tableData{
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 10px;
+    margin-top: 120px;
+  }
+  .pie{
+    width: 200px;
+    height: 200px;
+    clip:rect(0px,100px,200px,0px)
+  }
+  .hold{
+    width: 200px;
+    height: 200px;
+    clip:rect(0px,100px,200px,0px)    
+  }
+  .pieBackground{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+
+  }
+  .pieContainer{
+    position:relative; 
+    left: 25%;
+    top:15%;
+  }
+}
+
 .tableData{
   width: 80%;
   margin-left: 10%;
-  margin-top: 80px;
+  margin-top: 550px;
   margin-bottom: 50px;
 }
 table {
@@ -158,9 +249,10 @@ tr:nth-child(even) {background-color: #f2f2f2;}
     width: 90%;
     margin-left: 5%;
     margin-bottom: 10px;
+    margin-top: 120px;
   }
   .autocomplete{
-    margin-left:20px;
+    margin-left:20px; 
   }
 }
 @media screen and (max-width: 652px) {
