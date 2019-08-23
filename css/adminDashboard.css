@@ -73,7 +73,7 @@ body,html
 .tableData{
   width: 80%;
   margin-left: 10%;
-  margin-top: 80px;
+  margin-top: 550px;
   margin-bottom: 50px;
 }
 table {
@@ -86,18 +86,23 @@ th, td {
   padding: 8px;
 }
 
+
 .pieContainer {
-  height: 200px;
+  margin-top: 50px;
+  height: 100px;
+  position:relative; 
+  left: 35%;
+  top:15%;
 }
 .pieBackground {
   background-color: yellowgreen;
   position: absolute;
-  width: 100px;
-  height: 200px;
-  -moz-border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -o-border-radius: 50px;
-  border-radius: 50px;
+  width: 600px;
+  height: 600px;
+  -moz-border-radius: 300px;
+  -webkit-border-radius: 300px;
+  -o-border-radius: 300px;
+  border-radius: 300px;
   -moz-box-shadow: -1px 1px 3px #000;
   -webkit-box-shadow: -1px 1px 3px #000;
   -o-box-shadow: -1px 1px 3px #000;
@@ -105,23 +110,23 @@ th, td {
 }
 .pie {
   position: absolute;
-  width: 100px;
-  height: 200px;
-  -moz-border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -o-border-radius: 50px;
-  border-radius: 50px;
-  clip: rect(0px, 50px, 100px, 0px);
+  width: 600px;
+  height: 600px;
+  -moz-border-radius: 300px;
+  -webkit-border-radius: 300px;
+  -o-border-radius: 300px;
+  border-radius: 300px;
+  clip: rect(0px, 300px, 600px, 0px);
 }
 .hold {
   position: absolute;
-  width: 100px;
-  height: 200px;
-  -moz-border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -o-border-radius: 50px;
-  border-radius: 50px;
-  clip: rect(0px, 100px, 100px, 50px);
+  width: 600px;
+  height: 600px;
+  -moz-border-radius: 300px;
+  -webkit-border-radius: 300px;
+  -o-border-radius: 300px;
+  border-radius: 300px;
+  clip: rect(0px, 600px, 600px, 300px);
 }
 
 #pieSlice1 .pie {
@@ -162,7 +167,27 @@ tr:nth-child(even) {background-color: #f2f2f2;}
     width: 90%;
     margin-left: 5%;
     margin-bottom: 10px;
-    margin-top: 40px;
+    margin-top: 120px;
   }
-  
+  .pie{
+    width: 200px;
+    height: 200px;
+    clip:rect(0px,100px,200px,0px)
+  }
+  .hold{
+    width: 200px;
+    height: 200px;
+    clip:rect(0px,100px,200px,0px)    
+  }
+  .pieBackground{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+
+  }
+  .pieContainer{
+    position:relative; 
+    left: 25%;
+    top:15%;
+  }
 }
