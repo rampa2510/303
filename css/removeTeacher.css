@@ -1,0 +1,268 @@
+body,html
+{
+  margin:0;
+  padding:0;
+  width:100%;
+}
+
+#navbar
+{
+  display: flex;
+  width:100%;
+  height: 8vh;
+  justify-content: left;
+  align-items: center;
+  margin-bottom:8vh;
+  position: fixed;
+  top:0;
+  background-color: black;
+}
+.autocomplete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  width: 90%;
+  margin-left: 60px;
+}
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+}
+.autocomplete-items {
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+}
+.autocomplete-items div {
+  /* padding: 10px; */
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9; 
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+.navitem
+{
+  color:white;
+  padding:20px;
+  text-decoration: none;
+  font-family: Arial;
+}
+.teacherbtncont{
+  width: 80%;
+  display: flex;
+  margin-left: 10%;
+  justify-content: space-around;
+}
+.teacherbtn {
+  margin-top: 100px;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #000000), color-stop(1, #000000));
+  background:-moz-linear-gradient(top, #000000 5%, #000000 100%);
+  background:-webkit-linear-gradient(top, #000000 5%, #000000 100%);
+  background:-o-linear-gradient(top, #000000 5%, #000000 100%);
+  background:-ms-linear-gradient(top, #000000 5%, #000000 100%);
+  background:linear-gradient(to bottom, #000000 5%, #000000 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#000000',GradientType=0);
+  background-color:#000000;
+  -moz-border-radius:28px;
+  -webkit-border-radius:28px;
+  border-radius:28px;
+  border:1px solid #000000;
+  /* display:inline-block; */
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Courier New;
+  font-size:17px;
+  padding:16px 31px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #000000;
+}
+.teacherbtn:hover {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #000000), color-stop(1, #000000));
+  background:-moz-linear-gradient(top, #000000 5%, #000000 100%);
+  background:-webkit-linear-gradient(top, #000000 5%, #000000 100%);
+  background:-o-linear-gradient(top, #000000 5%, #000000 100%);
+  background:-ms-linear-gradient(top, #000000 5%, #000000 100%);
+  background:linear-gradient(to bottom, #000000 5%, #000000 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#000000',GradientType=0);
+  background-color:#000000;
+}
+.teacherbtn:active {
+  position:relative;
+  top:1px;
+}
+
+.pieContainer {
+  margin-top: 50px;
+  height: 100px;
+  position:relative; 
+  left: 35%;
+  top:15%;
+}
+.pieBackground {
+  background-color: yellowgreen;
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  -moz-border-radius: 300px;
+  -webkit-border-radius: 300px;
+  -o-border-radius: 300px;
+  border-radius: 300px;
+  -moz-box-shadow: -1px 1px 3px #000;
+  -webkit-box-shadow: -1px 1px 3px #000;
+  -o-box-shadow: -1px 1px 3px #000;
+  box-shadow: -1px 1px 3px #000;
+}
+.pie {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  -moz-border-radius: 300px;
+  -webkit-border-radius: 300px;
+  -o-border-radius: 300px;
+  border-radius: 300px;
+  clip: rect(0px, 300px, 600px, 0px);
+}
+.hold {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  -moz-border-radius: 300px;
+  -webkit-border-radius: 300px;
+  -o-border-radius: 300px;
+  border-radius: 300px;
+  clip: rect(0px, 600px, 600px, 300px);
+}
+
+#pieSlice1 .pie {
+  background-color: grey;
+  -webkit-transform:rotate(108deg);
+  -moz-transform:rotate(108deg);
+  -o-transform:rotate(108deg);
+  transform:rotate(108deg);
+}
+#pieSlice2 {
+  -webkit-transform:rotate(108deg);
+  -moz-transform:rotate(108deg);
+  -o-transform:rotate(108deg);
+  transform:rotate(108deg);
+}
+#pieSlice2 .pie {
+  background-color: orange;
+  -webkit-transform:rotate(30deg);
+  -moz-transform:rotate(30deg);
+  -o-transform:rotate(30deg);
+  transform:rotate(30deg);
+}
+
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+@media screen and (max-width: 480px) {
+  /* .teacherbtn{
+    flex: 1;
+  } */
+  .teacherbtncont{
+    flex-direction: column;
+  }
+  .teacherbtn:nth-child(2){
+    margin-top: 20px;
+  }
+  .tableData{
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 10px;
+    margin-top: 120px;
+  }
+  .pie{
+    width: 200px;
+    height: 200px;
+    clip:rect(0px,100px,200px,0px)
+  }
+  .hold{
+    width: 200px;
+    height: 200px;
+    clip:rect(0px,100px,200px,0px)    
+  }
+  .pieBackground{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+
+  }
+  .pieContainer{
+    position:relative; 
+    left: 25%;
+    top:15%;
+  }
+}
+
+.tableData{
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 550px;
+  margin-bottom: 50px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+@media screen and (max-width: 480px) {
+  /* .teacherbtn{
+    flex: 1;
+  } */
+  .teacherbtncont{
+    flex-direction: column;
+  }
+  .teacherbtn:nth-child(2){
+    margin-top: 20px;
+  }
+  .tableData{
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 10px;
+    margin-top: 120px;
+  }
+  .autocomplete{
+    margin-left:20px; 
+  }
+}
+@media screen and (max-width: 652px) {
+  .autocomplete{
+    margin-left:20px;
+  }
+}
+
+@media only screen and (max-width: 462px) {
+  .navitem{
+    padding: 10px;
+  }
+}
