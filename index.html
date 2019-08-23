@@ -8,6 +8,18 @@
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/common.css">
   <title>Home</title>
+  <script type="text/javascript">
+  function check()
+        {
+          var password = document.getElementById('user');
+          if(user.value == "admin")
+            window.location.href="./views/password.html"
+          else if(user.value == "teacher")
+            window.location.href="./views/password.html"
+          else
+            document.getElementById('login-area').innerHTML= "<p style='color:red'>Invalid Username</p>"+document.getElementById('login-area').innerHTML;
+        }
+      </script>
 </head>
 <body>
   <div class="loginCon">
@@ -21,13 +33,13 @@
   
      
       <div id="login-area">
-      <input type="text" name="username" placeholder="Username">
+      <input type="text" name="username" placeholder="Username" id="user">
       </div> 
       <div id="submit">
       <center>
-      <form action="./views/password.html">
-    <input type="submit" class="btn" value=">" />
-  </form>
+      
+    <input type="submit" class="btn" value=">" onclick="check()"/>
+  
     </center>
   </div>
     </div>
