@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../css/teachersDashboard.css">
   <link rel="stylesheet" href="../css/common.css">
@@ -17,7 +17,13 @@
   </div>
 
   <div class="autocomplete">
-    <input id="myInput" type="text" onchange="autocomplete(this,['Ram','Neel','Sudeep'])" name="searchSub" placeholder="Search Faculties">
+      <div class="styled-select slate">
+          <select>
+            <option>Here is the first option</option>
+            <option>The second option</option>
+            <option>The third option</option>
+          </select>
+        </div>        
   </div>
 
   <div  class="pieContainer">
